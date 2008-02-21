@@ -1,11 +1,23 @@
-Logeye
-======
-Rails log reader.
+Logeye - A Rubycocoa GUI for tailing Ruby on Rails log files
 
-Credits
-=======
-Lachie Cox <lachie@smartbomb.com.au>
+Releases http://code.google.com/p/logeye
+Code at http://github.com/lachie/logeye
+Clone from git://github.com/lachie/logeye.git
 
-License
-=======
-MIT, see LICENSE
+
+Status: buggy as
+
+
+Note:
+For development, Xcode and the Ringbarker gem are required
+
+$ sudo gem install ringbarker
+
+Ringbarker only handles Rails 1.2.x log files at the moment.
+
+
+
+Lachie Cox
+http://smartbomb.com.au
+
+Yours under the MIT License (see LICENSE)
