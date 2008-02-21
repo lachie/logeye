@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <style>
+    body {
+      font-family: Monaco;
+      font-size: 11;
+      margin: 0;
+    }
+    
+    html {
+      display:block;
+    }
+    
+    #head {
+      margin: .5em;
+    }
+    
+    #details img {
+      margin: 0 .5em 0 0;
+    }
+    
+    
+    #details {
+      display: block;
+      list-style-image: none;
+      list-style-position: outside;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
+    #details li {
+      background-image: url('blank16.png');
+      background-repeat: no-repeat;
+      background-position: top left;
+      padding: 2px 0 2px 18px;
+    }
+    
+    #details li.sql-line {
+      background-image: url('sql16.png');
+    }
+    
+    #details li.render-line {
+      background-image: url('render16.png');
+    }
+    
+    #details li.backtrace-line {
+      background-image: url('backtrace16.png');
+    }
+        
+    .line {
+      padding: .2em 0;
+    }
+    
+    .odd {
+      background: #e3edf8;
+    }
+    .even {
+      background: white;
+    }
+    
+    .compact {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      position: relative;
+    }
+    
+    .full {
+      overflow: visible;
+      white-space: normal;
+      background: #1c6fc0;
+      color: white;
+      text-shadow: 2px 2px #164a7d;
+      position: relative;
+    }
+
+    .full-line .title {
+      display:block;
+      position: relative;
+      font-size: 1.2em;
+      padding-bottom: 1em;
+    }
+        
+    .full-line .info {
+      display:block;
+      position: relative;
+
+    }
+
+    .compact-line .title {
+    }    
+    .compact-line .info {
+      font-size: .8em;
+      color: #888;
+      margin-left: .5em;
+    }
+    
+    #detail-section {
+      margin: 0 0 0 0;
+    }
+    
+    
+    </style>
+    <script type='text/javascript' src='prototype.js'></script>
+    <script type='text/javascript' src='shell.js'></script>
+  </head>
+  <body>
+    <div id="head" style="display:none">
+      <p>
+        <span id="requested_at"></span>
+        	from
+      	<span id="ip"></span>
+      </p>
+
+      <p>
+        <span id="http_code"></span>
+        <span id="verb"></span>
+        <span id="ctl_act"></span>
+      </p>
+      <p>
+        <span id="parameters"></span>
+      </p>
+    </div>
+
+    <div id="detail-section" style="display:none">
+      <h2>details</h2>
+
+      <ol id="details"></ol>
+
+    </div>
+  </body>
+</html>
